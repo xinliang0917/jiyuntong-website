@@ -1,0 +1,68 @@
+ .team-section {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+        .team-section h2 p {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .team-summary {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        .team-members {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .team-member {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .team-member:hover {
+            transform: translateY(-5px);
+        }
+
+        .team-member h3 {
+            background-color: #3498db;
+            color: white;
+            margin: 0;
+            padding: 1rem;
+        }
+
+        .team-member p {
+            padding: 1rem;
+            margin: 0;
+        }
+
+        /* 团队照片样式 */
+        .team-photo {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .team-photo img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .team-photo img:hover {
+            transform: scale(1.05);
+        }

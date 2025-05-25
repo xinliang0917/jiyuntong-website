@@ -1,0 +1,22 @@
+ 
+.company-profile {
+     margin: 0 auto;
+    min-height: 300px;
+    border: 20px;
+    padding: 20px;
+    background-color: #f0f0f0; 
+}
+.company-profile h1 {
+    text-align: center;
+    margin-top: 20px;
+     
+}
+
+.company-profile p {
+    padding: 40px 20px;
+  font-size: 18px;
+  line-height: 1.8;
+  
+  text-align: justify;
+  margin: 0 auto;
+}

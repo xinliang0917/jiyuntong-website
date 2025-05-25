@@ -1,0 +1,63 @@
+
+.core-technology{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 50px;
+}
+.core-technology img {
+  width: 500px;
+  height: 700px;
+  transition: all 0.3s ease-in-out;
+}
+
+.core-technology img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.core-technology-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.core-technology-content  h2 {
+  text-align: center;
+}
+
+.service-area  {
+ width: 80%; 
+ margin: 0 auto;
+ text-align: center;
+ padding: 20px;
+}
+
+.service-area h2 {
+  font-size: 24px;
+  margin-bottom: 20px; 
+}
+
+.image-row {
+    display: flex; /* 使用Flex布局实现横向排列 */
+    justify-content: space - between; /* 图片间均匀分布 */
+}
+.image-col {
+    flex: 1; /* 让每列图片等比例分配空间 */
+    margin: 0 50px; /* 图片左右间距 */
+}
+.image-col img {
+    width: 100%; /* 图片宽度占满所在列 */
+    height: 90%; /* 保持宽高比 */
+    display: block; /* 去除图片底部空白间隙 */
+    transition: all 0.3s ease-in-out; /* 添加过渡效果 */;
+}
+.image-col p {
+    margin-top: 10px; /* 图片下方文字与图片的间距 */
+}
+.image-col img:hover  {
+    transform: scale(1.1); /* 放大图片 */
+    opacity: 0.8; /* 降低图片透明度 */;
+
+}
+
+
