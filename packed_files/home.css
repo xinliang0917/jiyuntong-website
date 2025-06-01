@@ -2,25 +2,35 @@
   margin: 0;
   padding: 0;
 }
+
 header{
-    height: 100px;
+    /* height: 100px; */
     background-color: lightblue;
     padding: 20px;
     color: white;
    
 }
 
+header .header-container {
+    display: flex;
+    align-items: center; 
+    gap: 0px;
+}
+
 .nav-bar{
     background-color: lightblue;
     display: flex;
     align-items: center; 
-    justify-content: space-between; 
+    justify-content: flex-start; 
     padding: 0 20px;
-    gap: 30px; 
+    gap: 0px; 
 }
 
 .logo{ 
-    float: left;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
 }
 
 .logo img{
@@ -30,6 +40,7 @@ header{
 }
 .nav-bar ul{
     display: flex;
+    justify-content:space-around;
 }
 
 .nav-links {
