@@ -5,7 +5,7 @@
 
 header{
     /* height: 100px; */
-    background-color: lightblue;
+    background-color: #3b5897;
     padding: 20px;
     color: white;
    
@@ -18,7 +18,7 @@ header .header-container {
 }
 
 .nav-bar{
-    background-color: lightblue;
+    background-color: #3b5897;
     display: flex;
     align-items: center; 
     justify-content: flex-start; 
@@ -59,7 +59,7 @@ header .header-container {
 
 .nav-links a{
     text-decoration: none;
-    color: #000;
+    color:white;
     position: relative;
 }
 
@@ -70,7 +70,7 @@ header .header-container {
     bottom: -8px;
     width: 100%;
     height: 2px;
-    background-color: rgb(28, 71, 171);
+    background-color: #f8b830;
     transform: scaleX(0);
     transition: transform 0.35s ease-in-out;
 }
@@ -80,12 +80,13 @@ header .header-container {
 }
 
 .search-bar {
-    float: right;
+    display: flex;
     margin-left: auto;              
     justify-content: flex-end;
     flex-shrink: 0;         
     align-items: center;
     margin-top: -31px;
+    margin: 0 auto;
 }
 
 .search-bar input {
@@ -99,7 +100,7 @@ header .header-container {
     white-space: nowrap;   
 }
 
-.swiper-container{ 
+/* .swiper-container{ 
     height: 400px;
     width: 750px;
 }
@@ -110,13 +111,40 @@ header .header-container {
 }
 
 .swiper-slide img {
-    height: 400px;
-    width: 750px;
+    height: 400px;    width: 750px;
     object-fit: cover;  
-}
+} */
+
+.swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+	.swiper-wrapper{
+	  /* 通过改变animation-timing-function 制作弹性切换效果 */
+		    transition: 2s cubic-bezier(0.68, -0.4, 0.27, 1.34) 0.2s;
+		}
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
 
 footer{
-    background-color: lightblue;
+    background-color: #c7daf3;
     padding: 80px;
     color: #000;
     text-align: center;
@@ -153,7 +181,7 @@ footer{
     bottom: -5px;
     width: 100%;
     height: 2px;
-    background-color: rgb(28, 71, 171);
+    background-color: #f8b830;
     transform: scaleX(0);
     transition: transform 0.3s ease-in-out;
 }
