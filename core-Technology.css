@@ -1,12 +1,18 @@
-
+:root {
+    --color-1: #3b5897;
+    --color-2: #899bc2;
+    --color-3: #dbe4f0;
+    --color-4: #f8b830;
+    --color-5: #ff6e61;
+  }
 .core-technology{
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 2fr;
   margin: 50px;
 }
 .core-technology img {
-  width: 500px;
-  height: 700px;
+  width: 600px;
+  height: 400px;
   transition: all 0.3s ease-in-out;
 }
 
@@ -23,6 +29,9 @@
 }
 .core-technology-content  h2 {
   text-align: center;
+}
+.core-technology-content  p {
+  padding: 20px;
 }
 
 .service-area  {
@@ -68,21 +77,21 @@
 
         .section-title {
             font-size: 2rem;
-            color: #2e4057;
+            color: var(--color-1);
             margin-bottom: 1.5rem;
             animation: fadeInLeft 1s ease-out;
         }
         .service-container h2 {
             text-align: center;
             font-size: 2rem;
-            color: #2e4057;
+            color: var(--color-1);
             margin-bottom: 1.5rem;
             animation: fadeInLeft 1s ease-out;
         }
-.service-container p {
+        .service-container p {
             text-align: center;
             font-size: 1.2rem;
-            color: #555;
+            color: #666;
             margin-bottom: 2rem;
             animation: fadeInLeft 1s ease-out;
         }
@@ -174,7 +183,7 @@
 
         .project-title {
             font-size: 1.5rem;
-            color: #2e4057;
+            color: var(--color-1);
             margin-bottom: 1rem;
         }
 

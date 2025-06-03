@@ -40,7 +40,7 @@ header {
 }
 .nav-links {
     display: flex;
-    gap: 30px;
+    gap: 50px;
 }
 .nav-links li {
     list-style: none;
@@ -257,7 +257,7 @@ header {
 }
 /* 页脚样式 */
 footer {
-    background-color: #c7daf3;
+    background-color: var(--color-3);
     padding: 60px 0 30px;
     color: #333;
 }
@@ -276,7 +276,7 @@ footer {
 }
 .footer-logo img {
     width: 100px;
-    margin-bottom: 20px;
+    margin: 20px;
 }
 .footer-links h3,
 .footer-contact h3 {
@@ -315,7 +315,7 @@ footer {
     bottom: -5px;
     width: 100%;
     height: 2px;
-    background-color: #333;
+    background-color: var(--color-4);
     transform: scaleX(0);
     transition: transform 0.3s ease-in-out;
 }
