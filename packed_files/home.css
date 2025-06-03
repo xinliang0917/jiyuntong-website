@@ -1,0 +1,191 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header{
+    /* height: 100px; */
+    background-color: #3b5897;
+    padding: 20px;
+    color: white;
+   
+}
+
+header .header-container {
+    display: flex;
+    align-items: center; 
+    gap: 0px;
+}
+
+.nav-bar{
+    background-color: #3b5897;
+    display: flex;
+    align-items: center; 
+    justify-content: flex-start; 
+    padding: 0 20px;
+    gap: 0px; 
+}
+
+.logo{ 
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    flex: 0 0 auto;        
+    margin-right: 40px;   
+    width: 80px; 
+}
+.nav-bar ul{
+    display: flex;
+    justify-content:space-around;
+}
+
+.nav-links {
+    display: flex;
+    flex: 1;              
+    gap: 20px;         
+    padding: 0;
+    margin: 30px 0 0 0;
+    min-width: 500px;   
+    font-size: 18px;
+}
+
+.nav-links li {
+    list-style: none; 
+}
+
+.nav-links a{
+    text-decoration: none;
+    color:white;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 100%;
+    height: 2px;
+    background-color: #f8b830;
+    transform: scaleX(0);
+    transition: transform 0.35s ease-in-out;
+}
+
+.nav-links a:hover::after {
+    transform: scaleX(1);
+}
+
+.search-bar {
+    display: flex;
+    margin-left: auto;              
+    justify-content: flex-end;
+    flex-shrink: 0;         
+    align-items: center;
+    margin-top: -31px;
+    margin: 0 auto;
+}
+
+.search-bar input {
+    height: 34px;
+    flex: 1;
+    max-width: 200px;
+}
+
+.search-bar button {
+    padding: 8px 15px;
+    white-space: nowrap;   
+}
+
+/* .swiper-container{ 
+    height: 400px;
+    width: 750px;
+}
+
+.swiper-slide{
+    height: 400px;
+    width: 750px;
+}
+
+.swiper-slide img {
+    height: 400px;    width: 750px;
+    object-fit: cover;  
+} */
+
+.swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+	.swiper-wrapper{
+	  /* 通过改变animation-timing-function 制作弹性切换效果 */
+		    transition: 2s cubic-bezier(0.68, -0.4, 0.27, 1.34) 0.2s;
+		}
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+
+footer{
+    background-color: #c7daf3;
+    padding: 80px;
+    color: #000;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.footer-logo{ 
+    float: left;
+}
+
+.footer-links{
+    justify-content: space-between;       
+    gap: 20px; 
+}
+
+.footer-links ul{
+    display: flex;
+}
+.footer-links li {
+    list-style: none; 
+    margin-left: 5%;
+}
+
+.footer-links a{
+    text-decoration: none;
+    color: #000;
+    position: relative;
+}
+
+.footer-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background-color: #f8b830;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.footer-links a:hover::after {
+    transform: scaleX(1);
+}
