@@ -7,13 +7,14 @@
     <title>集云通信息科技 - 首页</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="history.css"> <!-- 确保引入 history.css -->
 </head>
 
 <body>
     <header>
         <div class="header-container">
             <div class="logo">
-                <img src="images/logo(new).jpg" alt="集云通Logo">
+                <img src="images/logo2.jpg" alt="集云通Logo">
             </div>
             <ul class="nav-links">
                 <li><a href="index.html">首页</a></li>
@@ -47,45 +48,54 @@
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
     </div>
-    <!-- 主要内容区域 -->
-    <div class="content">
-        <div class="section-title">
-            <h2>我们的核心优势</h2>
-            <p>以技术创新驱动企业发展，提供全方位的数字化解决方案</p>
+
+    <!-- 添加时间轴 -->
+    <h1>公司发展历程</h1>
+    <div class="timeline">
+        <div class="container left">
+            <div class="content">
+                <h2>2021年</h2>
+                <p>公司于科技浪潮中诞生，凭借创新的技术理念与前瞻性的战略布局，迅速斩获佛山市专精特新中小企业认定，在智慧科技领域初露锋芒。</p>
+            </div>
         </div>
-        <div class="features">
-            <div class="feature-card">
-                <div class="feature-img">
-                    <img src="images/service1.jpg" alt=""></img>
-                </div>
-                <div class="feature-content">
-                    <h3>价值观念</h3>
-                    <p>以客户需求为导向，以科技创新为引擎</p>
-                    <a href="#" class="btn">了解更多</a>
-                </div>
+        <div class="container right">
+            <div class="content">
+                <h2>2022年</h2>
+                <p>凭借强大的技术研发实力和丰富的行业经验，成功中标佛山地铁智慧车站建设项目，将先进的物联网、大数据、人工智能技术深度融合，打造智能、高效、安全的地铁出行新体验。</p>
             </div>
-            <div class="feature-card">
-                <div class="feature-img">
-                    <img src="images/service2.jpg" alt=""></img>
-                </div>
-                <div class="feature-content">
-                    <h3>核心业务</h3>
-                    <p>智能安防系统、工业物联网与汽车电子研发、建筑智能化工程</p>
-                    <a href="#" class="btn">了解更多</a>
-                </div>
-            </div>
-            <div class="feature-card">
-                <div class="feature-img">
-                    <img src="images/service3.jpg" alt=""></img>
-                </div>
-                <div class="feature-content">
-                    <h3>企业定位</h3>
-                    <p>智慧城市建设的数字化赋能者</p>
-                    <a href="#" class="btn">了解更多</a>
-                </div>
+        </div>
+        <div class="container left">
+            <div class="content">
+                <h2>2023年</h2>
+                <p>以创新驱动发展，积极拓展华南地区市场。凭借自主研发的高科技解决方案，服务企业数量突破百家，为各行业数字化转型注入强劲动力。</p>
             </div>
         </div>
     </div>
+
+    <script>
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+        function checkAnimation() {
+            const containers = document.querySelectorAll('.container');
+            containers.forEach(container => {
+                if (isInViewport(container)) {
+                    container.classList.add('show');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', checkAnimation);
+        window.addEventListener('load', checkAnimation);
+    </script>
+
     <footer>
         <div class="footer-content">
             <div class="footer-logo">
@@ -120,3 +130,8 @@
 </body>
 
 </html>
+时间轴仍然是静态的可能有以下几个原因：
+
+### 1. CSS 样式未正确引入
+在 `history.html` 里，您仅引入了 `index.css`，而时间轴的动态样式可能在 `history.css` 或者 `about.css` 中。您需要确保引入包含 `container` 和
+`container.show` 样式的 CSS 文件。
