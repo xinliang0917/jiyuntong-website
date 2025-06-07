@@ -15,7 +15,7 @@
     <header>
         <div class="header-container">
             <div class="logo">
-                <img src="images/logo2.jpg" alt="集云通Logo">
+                <img src="images/logo.jpg" alt="集云通Logo">
             </div>
             <ul class="nav-links">
                 <li><a href="index.html">首页</a></li>
@@ -33,11 +33,26 @@
             </div>
         </div>
     </header>
-
+    <main>
+        <div class="review-container">
+            <div class="review-wrapper">
+                <div class="review-card">
+                    <div class="review-text">“集云通的智能仓储系统帮我们节省了30%人力成本！”</div>
+                    <div class="review-author">——某跨境电商企业CTO</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-text">“他们的售后服务响应速度比合同要求快一倍！”</div>
+                    <div class="review-author">——某汽车零部件制造商</div>
+                </div>
+            </div>
+            <button class="nav-btn prev-btn" onclick="prevReview()">←</button>
+            <button class="nav-btn next-btn" onclick="nextReview()">→</button>
+        </div>
+    </main>
     <footer>
         <div class="footer-content">
             <div class="footer-logo">
-                <img src="images/logo2.jpg" alt="集云通Logo">
+                <img src="images/logo.jpg" alt="集云通Logo">
                 <h3>佛山市集云通信息科技有限公司</h3>
                 <p>专注智慧城市领域的数字化解决方案服务商</p>
             </div>
@@ -55,7 +70,7 @@
                 <h3>联系我们</h3>
                 <p>电话：0757-xxxx</p>
                 <p>邮箱：<a href="mailto:info@jyuntong.com">info@jyuntong.com</a></p>
-                <p>地址：广东省佛山市南海区科技产业园</p>
+                <p>地址：佛山市禅城区石湾镇新明二路1号B座</p>
             </div>
             <div class="footer-copyright">
                 Copyright 2021~2023. 佛山市集云通信息科技有限公司.粤ICP备2022136876号
@@ -63,6 +78,29 @@
         </div>
     </footer>
     <!-- 外部JavaScript文件 -->
+    <script>
+        const reviewWrapper = document.querySelector('.review-wrapper');
+        const reviewCards = document.querySelectorAll('.review-card');
+        let currentIndex = 0;
+    
+        function nextReview() {
+            currentIndex = (currentIndex + 1) % reviewCards.length;
+            updateReviewPosition();
+        }
+    
+        function prevReview() {
+            currentIndex = (currentIndex - 1 + reviewCards.length) % reviewCards.length;
+            updateReviewPosition();
+        }
+    
+        function updateReviewPosition() {
+            const offset = -currentIndex * 100;
+            reviewWrapper.style.transform = `translateX(${offset}%)`;
+        }
+    
+        // 自动轮播
+        setInterval(nextReview, 5000);
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="index.js"></script>
 </body>

@@ -37,7 +37,6 @@ header {
     align-items: center;
     padding: 0 20px;
     gap: 50px;
-    /* 增加元素之间的间隙 */
 }
 
 .logo img {
@@ -101,6 +100,7 @@ header {
 }
 
 .search-bar button {
+    width: 60px;
     height: 38px;
     padding: 0 15px;
     background-color: var(--color-4);
@@ -118,10 +118,8 @@ header {
 
 /* 轮播图样式 */
 .swiper-container {
-    position: relative;
     width: 100%;
-    height: 0;
-    padding-bottom: 56.25%;
+    height: 800px;
     background-color: var(--color-3);
     overflow: hidden;
 }
@@ -131,7 +129,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 800px;
 }
 
 .swiper-slide {
@@ -305,7 +303,7 @@ header {
 /* 页脚样式 */
 footer {
     background-color: var(--color-3);
-    padding: 60px 0 30px;
+    padding: 30px 0;
     color: #333;
 }
 
@@ -326,7 +324,7 @@ footer {
 
 .footer-logo img {
     width: 100px;
-    margin: 20px;
+    margin-bottom: 20px;
 }
 
 .footer-links h3,
