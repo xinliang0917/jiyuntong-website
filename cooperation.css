@@ -11,6 +11,7 @@
     animation: fadeInLeft 1s ease-out;
     position: relative;
 }
+
 .partner-list,
 .alliance-list {
     display: flex;
@@ -19,14 +20,13 @@
     animation: fadeInUp 1s ease-out;
 }
 
-
 .partner-item,
 .alliance-item {
     text-align: center;
     padding: 1.5rem;
     border-radius: 8px;
     border: 1px solid var(--color-1);
-    box-shadow: 0 0 10px var(--color-2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     flex: 1 1 calc(33.333% - 2rem);
     min-width: 250px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -51,6 +51,7 @@
     transform: translateY(-5px);
     box-shadow: 0 0 20px var(--color-2);
 }
+
 @keyframes fadeInLeft {
     from {
         opacity: 0;
@@ -62,8 +63,6 @@
         transform: translateX(0);
     }
 }
-
-
 
 @keyframes fadeInUp {
     from {
