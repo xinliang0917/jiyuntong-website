@@ -16,7 +16,6 @@ body {
     font-family: 'Microsoft YaHei', sans-serif;
     color: #333;
     line-height: 1.6;
-    background-color: #f5f7fa;
 }
 
 /* 头部样式 */
@@ -30,18 +29,34 @@ header {
 }
 
 .header-container {
-    max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: center;
     padding: 0 20px;
     gap: 50px;
+    /* 添加弹性属性，允许容器内元素收缩 */
+    flex-wrap: wrap; 
+    max-width: 100%; 
+    /* 确保容器不会超出屏幕宽度 */
+    box-sizing: border-box; 
+    /* 让内边距包含在宽度内 */
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        justify-content: center;
+    }
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
 }
 
 .logo img {
     width: 80px;
-    height: auto;
+    height: 80px;
 }
 
 .nav-links {
@@ -85,6 +100,11 @@ header {
     transform: scaleX(1);
 }
 
+.nav-links li.active a {
+    color: var(--color-4); 
+    font-weight: bold; 
+}
+
 .search-bar {
     display: flex;
     align-items: center;
@@ -117,33 +137,38 @@ header {
 }
 
 /* 轮播图样式 */
-.swiper-container {
-    width: 100%;
-    height: 800px;
+.swiper-parent {
     background-color: var(--color-3);
+}
+
+.swiper-container {
+    width: 60%;
+    height: 40vh;
+    margin: 0 auto;
     overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
+    background-color: var(--color-3);
 }
 
 .swiper-wrapper {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 800px;
+    height: 100%;
+    display: flex; /* 使用 flex 布局 */
 }
 
 .swiper-slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+    flex-shrink: 0; /* 防止幻灯片缩小 */
+    width: 100%;
+    height: 100%;
+    will-change: transform;
+    transition: transform 0.3s ease;
 }
 
 .swiper-slide img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
 }
 
 .swiper-button-next,
@@ -161,6 +186,7 @@ header {
     align-items: center;
     cursor: pointer;
     transition: all 0.3s ease;
+    will-change: transform;
 }
 
 .swiper-button-next::after,
@@ -179,7 +205,6 @@ header {
 
 .swiper-button-prev::after {
     transform: rotate(-135deg);
-    margin-left: 5px;
 }
 
 .swiper-button-next {
@@ -188,7 +213,6 @@ header {
 
 .swiper-button-next::after {
     transform: rotate(45deg);
-    margin-right: 5px;
 }
 
 .swiper-button-next:hover,
@@ -223,10 +247,10 @@ header {
 .section-title::after {
     content: '';
     display: block;
-    width: 30%;
+    width: 60%;
     height: 2px;
     background: var(--color-4);
-    margin: 8px auto;
+    margin: 10px auto;
 }
 
 .features {
@@ -272,36 +296,52 @@ header {
 }
 
 .feature-content h3 {
-    color: var(--color-1);
-    margin-bottom: 15px;
+    color: var(--color-2);
     font-size: 22px;
+    text-align: center;
 }
 
 .feature-content p {
     color: var(--color-2);
-    margin-bottom: 15px;
 }
 
-.btn {
-    display: inline-block;
-    background-color: var(--color-4);
-    color: #333;
-    padding: 10px 25px;
+.tooltip {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 15px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+}
+
+.feature-card:hover .tooltip {
+    opacity: 1;
+}
+
+/* 发展理念内容容器样式 */
+.develop-concept {
+    background-color: #f9f9f9;
+    border-left: 20px solid var(--color-2);
+    padding: 20px;
+    margin: 0 auto 50px;
+    max-width: 800px;
+    line-height: 1.6;
+    font-size: 20px;
+    color: #666;
     border-radius: 4px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s;
-    border: none;
-    cursor: pointer;
-}
-
-.btn:hover {
-    background-color: var(--color-5);
-    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* 页脚样式 */
-footer {
+footer{
+    width: 100% !important; 
     background-color: var(--color-3);
     padding: 30px 0;
     color: #333;
@@ -327,28 +367,40 @@ footer {
     margin-bottom: 20px;
 }
 
+.footer-logo h3 {
+    margin-bottom: 10px;
+}
+
 .footer-links h3,
 .footer-contact h3 {
+    text-align: center;
     font-size: 20px;
     margin-bottom: 20px;
     color: var(--color-1);
     position: relative;
     padding-bottom: 10px;
+    border-bottom: 2px solid var(--color-4);
 }
 
-.footer-links h3::after,
-.footer-contact h3::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 15%;
-    height: 2px;
-    background: var(--color-4);
+.footer-links-list {
+    list-style-type: none; /* 移除列表项的默认符号 */
+    padding: 0; /* 移除默认内边距 */
+    display: grid; /* 使用网格布局 */
+    grid-template-columns: repeat(2, 1fr); /* 创建两列，每列宽度相等 */
+    gap: 10px; /* 设置网格项之间的间距 */
 }
 
+.footer-links-list li {
+    margin: 0; /* 移除列表项的默认外边距 */
+}
 .footer-links ul {
-    list-style: none;
+    text-align: center;
+
+    list-style-type: none; /* 移除列表项的默认样式 */
+    padding: 0;
+    display: grid; /* 使用网格布局 */
+    grid-template-columns: repeat(2, 1fr); /* 创建两列，每列宽度相等 */
+    gap: 10px; /* 设置网格项之间的间距 */
 }
 
 .footer-links li {
@@ -404,7 +456,6 @@ footer {
 .footer-copyright {
     text-align: center;
     padding-top: 30px;
-    margin-top: 40px;
     border-top: 1px solid var(--color-2);
     color: #666;
     font-size: 14px;

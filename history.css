@@ -1,97 +1,186 @@
-
-h1 {
-    text-align: center;
-    color: var(--color-1);
+.history-section {
+    margin: 0 auto 40px ;
+    max-width: 1000px; /* 调整最大宽度以适应时间轴布局 */
+    padding: 20px;;
+    border-radius: 10px;
 }
 
+.history-section h1 {
+    text-align: center;
+    margin: 40px 0;
+    color: var(--color-1);
+    font-size: 38px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.history-section h1::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: var(--color-4);
+    border-radius: 2px;
+}
+
+/* Timeline Styles */
 .timeline {
     position: relative;
-    max-width: 1200px;
-    margin: 0 auto;
+    padding: 20px 0;
 }
 
-.timeline::after {
+.timeline::before {
     content: '';
     position: absolute;
-    width: 6px;
-    background-color: var(--color-1);
+    left: 50%;
     top: 0;
     bottom: 0;
-    left: 50%;
-    margin-left: -3px;
+    width: 4px;
+    background-color: var(--color-2); /* 时间轴线颜色 */
+    transform: translateX(-50%);
+    z-index: 0;
 }
 
-.container {
-    padding: 10px 40px;
+.timeline-item {
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
     position: relative;
-    background-color: inherit;
-    width: 50%;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 0.8s ease-out;
+    opacity: 0; /* 初始隐藏 */
+    transform: translateY(50px); /* 初始位置 */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* 动画过渡 */
 }
 
-.container.show {
-    opacity: 1;
-    transform: translateY(0);
+.timeline-item.active {
+    opacity: 1; /* 激活时显示 */
+    transform: translateY(0); /* 激活时回到原位 */
 }
 
-.container::after {
+.timeline-item.left {
+    justify-content: flex-start;
+}
+
+.timeline-item.right {
+    justify-content: flex-end;
+}
+
+.timeline-dot {
+    width: 20px;
+    height: 20px;
+    background-color: var(--color-1);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    border: 3px solid var(--color-4);
+    transition: background-color 0.3s ease;
+}
+
+.timeline-item:hover .timeline-dot {
+    background-color: var(--color-5);
+}
+
+.timeline-content {
+    background-color: var(--color-3);
+    border-radius: 8px;
+    padding: 20px 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 45%; /* 内容最大宽度 */
+    position: relative; /* 确保 z-index 工作 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-item.left .timeline-content {
+    margin-right: 30px; /* 距离时间轴线的距离 */
+}
+
+.timeline-item.right .timeline-content {
+    margin-left: 30px; /* 距离时间轴线的距离 */
+}
+
+.timeline-content:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+.timeline-content h2 {
+    color: var(--color-1);
+    font-size: 26px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid var(--color-4);
+    padding-bottom: 8px;
+}
+
+.timeline-content p {
+    font-size: 16px;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+/* 小箭头指示内容方向 */
+.timeline-item.left .timeline-content::after {
     content: '';
     position: absolute;
-    width: 25px;
-    height: 25px;
-    right: -17px;
-    background-color: white;
-    border: 4px solid var(--color-4);
-    top: 15px;
-    border-radius: 50%;
-    z-index: 1;
-}
-
-.left {
-    left: 0;
-}
-
-.right {
-    left: 50%;
-}
-
-.left::before {
-    content: " ";
-    height: 0;
-    position: absolute;
-    top: 22px;
+    right: -10px;
+    top: 25px;
     width: 0;
-    z-index: 1;
-    right: 30px;
-    border: medium solid white;
-    border-width: 10px 0 10px 10px;
-    border-color: transparent transparent transparent white;
-}
-
-.right::before {
-    content: " ";
     height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid var(--color-3);
+}
+
+.timeline-item.right .timeline-content::after {
+    content: '';
     position: absolute;
-    top: 22px;
+    left: -10px;
+    top: 25px;
     width: 0;
-    z-index: 1;
-    left: 30px;
-    border: medium solid white;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent white transparent transparent;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid var(--color-3);
 }
 
-.right::after {
-    left: -16px;
-}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 20px; /* 小屏幕下时间轴线左移 */
+        transform: translateX(0);
+    }
 
-.content {
-    padding: 20px 30px;
-    background-color: var(--color-1);
-    position: relative;
-    border-radius: 6px;
-    box-shadow: 0 0 10px var(--color-4);
-    color: #fff;
+    .timeline-item {
+        flex-direction: column; /* 小屏幕下垂直排列 */
+        align-items: flex-start;
+        padding: 0 0 20px 40px; /* 调整内边距 */
+    }
+
+    .timeline-item.left,
+    .timeline-item.right {
+        justify-content: flex-start;
+        padding-right: 0;
+        padding-left: 40px; /* 统一左侧对齐 */
+    }
+
+    .timeline-dot {
+        left: 20px; /* 小屏幕下圆点左移 */
+        transform: translate(-50%, -50%); /* 保持垂直居中 */
+    }
+
+    .timeline-content {
+        max-width: 100%; /* 小屏幕下内容宽度100% */
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .timeline-item.left .timeline-content::after,
+    .timeline-item.right .timeline-content::after {
+        border: none; /* 移除小箭头 */
+    }
 }

@@ -1,127 +1,146 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
     <title>集云通信息科技 - 首页</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
-    <link rel="stylesheet" href="index.css">
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
 
-<body>
+  <body>
     <header>
-        <div class="header-container">
-            <div class="logo">
-                <img src="images/logo.jpg" alt="集云通Logo">
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html">首页</a></li>
-                <li><a href="about.html">公司概况</a></li>
-                <li><a href="technology.html">核心优势</a></li>
-                <li><a href="team.html">技术团队</a></li>
-                <li><a href="service.html">服务能力</a></li>
-                <li><a href="history.html">发展历程</a></li>
-                <li><a href="cooperation.html">合作生态</a></li>
-                <li><a href="customer.html">客户口碑</a></li>
-                <li><a href="#">联系我们</a></li>
-            </ul>
-            <div class="search-bar">
-                <input type="text" placeholder="搜索...">
-                <button type="submit">搜索</button>
-            </div>
+      <div class="header-container">
+        <div class="logo">
+          <img src="images/logo.png" alt="集云通Logo" />
         </div>
+        <ul class="nav-links">
+          <li><a href="index.html">首页</a></li>
+          <li><a href="about.html">公司概况</a></li>
+          <li><a href="advantage.html">核心优势</a></li>
+          <li><a href="team.html">技术团队</a></li>
+          <li><a href="service.html">服务能力</a></li>
+          <li><a href="history.html">发展历程</a></li>
+          <li><a href="cooperation.html">合作生态</a></li>
+          <li><a href="customer.html">客户口碑</a></li>
+          <li>
+            <a href="https://www.jyt-information.com/" target="_blank"
+              >联系我们</a
+            >
+          </li>
+        </ul>
+        <div class="search-bar">
+          <input type="text" placeholder="搜索..." />
+          <button type="submit">搜索</button>
+        </div>
+      </div>
     </header>
-    <!-- 轮播图 -->
-    <div class="swiper-container">
+    <!-- 添加父元素 -->
+    <div class="swiper-parent">
+      <div class="swiper-container">
         <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <img src="images/slide1.jpg">
-            </div>
-            <div class="swiper-slide">
-                <img src="images/slide2.jpg">
-            </div>
-            <div class="swiper-slide">
-                <img src="images/slide3.jpg">
-            </div>
+          <div class="swiper-slide">
+            <img src="/images/slide1.jpg" alt="Slide 1" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/images/slide2.jpg" alt="Slide 2" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/images/slide3.jpg" alt="Slide 3" />
+          </div>
         </div>
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
+      </div>
     </div>
     <!-- 主要内容区域 -->
     <div class="content">
-        <div class="section-title">
-            <h2>我们的核心优势</h2>
-            <p>以技术创新驱动企业发展，提供全方位的数字化解决方案</p>
+      <div class="section-title">
+        <h2>以技术创新驱动企业发展</h2>
+        <h2>提供全方位的数字化解决方案</h2>
+        <p></p>
+      </div>
+      <div class="features">
+        <div class="feature-card">
+          <div class="feature-img">
+            <img src="images/service1.jpg" alt="" />
+            <div class="tooltip">
+              80%以上员工为专业技术人员，本科及以上学历占比75%，团队持续通过行业认证与院校合作保持技术前沿性。业务覆盖智能建筑系统集成、信息安全设备研发、工业物联网解决方案及安防工程全周期服务，深度融合AI、云计算等创新技术。
+            </div>
+          </div>
+          <div class="feature-content">
+            <h3>技术驱动，专业深耕</h3>
+          </div>
         </div>
-        <div class="features">
-            <div class="feature-card">
-                <div class="feature-img">
-                    <img src="images/service1.jpg" alt=""></img>
-                </div>
-                <div class="feature-content">
-                    <h3>价值观念</h3>
-                    <p>以客户需求为导向，以科技创新为引擎</p>
-                    <a href="#" class="btn">了解更多</a>
-                </div>
+        <div class="feature-card">
+          <div class="feature-img">
+            <img src="images/service2.jpg" alt="" />
+            <div class="tooltip">
+              从设计咨询到施工运维，公司提供一站式服务：<br />​智能安防系统：<br />人防工程、消防设备、网络通信一体化部署<br />​工业数字化：<br />汽车零部件研发、环境监测仪器、自动化控制系统<br />​信息技术服务：<br />软件开发、数据管理、电教设备集成
             </div>
-            <div class="feature-card">
-                <div class="feature-img">
-                    <img src="images/service2.jpg" alt=""></img>
-                </div>
-                <div class="feature-content">
-                    <h3>核心业务</h3>
-                    <p>智能安防系统、工业物联网与汽车电子研发、建筑智能化工程</p>
-                    <a href="#" class="btn">了解更多</a>
-                </div>
-            </div>
-            <div class="feature-card">
-                <div class="feature-img">
-                    <img src="images/service3.jpg" alt=""></img>
-                </div>
-                <div class="feature-content">
-                    <h3>企业定位</h3>
-                    <p>智慧城市建设的数字化赋能者</p>
-                    <a href="#" class="btn">了解更多</a>
-                </div>
-            </div>
+          </div>
+          <div class="feature-content">
+            <h3>全场景服务能力</h3>
+          </div>
         </div>
+        <div class="feature-card">
+          <div class="feature-img">
+            <img src="images/service3.jpg" alt="" />
+            <div class="tooltip">
+              与国内外知名软硬件厂商深度协作，严格遵循“快速响应、高质交付、全程护航”标准，已为多行业客户提供定制化解决方案，技术落地案例覆盖智能楼宇、智慧交通及工业物联网领域。
+            </div>
+          </div>
+          <div class="feature-content">
+            <h3>生态合作与品质承诺</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section-title">
+      <h2>发展理念</h2>
+    </div>
+    <div class="develop-concept">
+      秉承“以客户需求为导向，以科技创新为引擎”的价值观，公司持续优化“技术+服务”双轮驱动模式，通过ISO标准化管理、员工创新能力培养及全流程质控体系，赋能客户实现降本增效与数字化转型，立志成为粤港澳大湾区智能化建设的标杆企业。
     </div>
     <footer>
-        <div class="footer-content">
-            <div class="footer-logo">
-                <img src="images/logo.jpg" alt="集云通Logo">
-                <h3>佛山市集云通信息科技有限公司</h3>
-                <p>专注智慧城市领域的数字化解决方案服务商</p>
-            </div>
-            <div class="footer-links">
-                <h3>快速链接</h3>
-                <ul>
-                    <li><a href="index.html">首页</a></li>
-                    <li><a href="about.html">公司概况</a></li>
-                    <li><a href="technology.html">核心优势</a></li>
-                    <li><a href="team.html">技术团队</a></li>
-                    <li><a href="service.html">服务能力</a></li>
-                    <li><a href="history.html">发展历程</a></li>
-                    <li><a href="cooperation.html">合作生态</a></li>
-                    <li><a href="customer.html">客户口碑</a></li>
-                    <li><a href="#">联系我们</a></li>
-                </ul>
-            </div>
-            <div class="footer-contact">
-                <h3>联系我们</h3>
-                <p>电话：0757-xxxx</p>
-                <p>邮箱：<a href="mailto:info@jyuntong.com">info@jyuntong.com</a></p>
-                <p>地址：佛山市禅城区石湾镇新明二路1号B座</p>
-            </div>
-            <div class="footer-copyright">
-                Copyright 2021~2023. 佛山市集云通信息科技有限公司.粤ICP备2022136876号
-            </div>
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="images/logo.png" alt="集云通Logo" />
+          <h3>佛山市集云通信息科技有限公司</h3>
+          <p>专注智慧城市领域的数字化解决方案服务商</p>
         </div>
+        <div class="footer-links">
+          <h3>快速链接</h3>
+          <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="about.html">公司概况</a></li>
+            <li><a href="advantage.html">核心优势</a></li>
+            <li><a href="team.html">技术团队</a></li>
+            <li><a href="service.html">服务能力</a></li>
+            <li><a href="history.html">发展历程</a></li>
+            <li><a href="cooperation.html">合作生态</a></li>
+            <li><a href="customer.html">客户口碑</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h3>联系我们</h3>
+          <p>电话：0757-xxxx</p>
+          <p>邮箱：<a href="mailto:info@jyuntong.com">info@jyuntong.com</a></p>
+          <p>地址：佛山市禅城区石湾镇新明二路1号B座</p>
+        </div>
+        <div class="footer-copyright">
+          Copyright 2021~2023. 佛山市集云通信息科技有限公司.粤ICP备2022136876号
+        </div>
+      </div>
     </footer>
-    <!-- 外部JavaScript文件 -->
+    
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="index.js"></script>
-</body>
-
+  </body>
 </html>

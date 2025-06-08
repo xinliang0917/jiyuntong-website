@@ -16,20 +16,122 @@
      min-height: 300px;
      border: 20px;
      padding: 20px 20%;
-     background-color: #fff
  }
 
  .company-profile h1 {
      text-align: center;
      margin-top: 20px;
-
+     color: var(--color-1);
  }
 
  .company-profile p {
      padding: 20px;
-     font-size: 18px;
+     font-size: 22px;
      line-height: 1.8;
      text-align: justify;
      margin: 0 auto;
  }
 
+ .company-details {
+    display: flex;
+    flex-wrap: wrap; /* 允许换行 */
+    justify-content: space-around; /* 平均分布 */
+    gap: 40px; /* 元素间距 */
+    margin: 40px;
+}
+
+.detail-item {
+    background-color: var(--color-3);
+    border-radius: 8px;
+    padding: 25px;
+    flex: 1; 
+    min-width: 300px; 
+    margin: 0 40px 40px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    opacity: 0; 
+    transform: translateY(20px); 
+    animation: fadeInMoveUp 0.8s forwards; 
+}
+
+.detail-item:nth-child(2) {
+    animation-delay: 0.4s; 
+}
+
+.detail-item:nth-child(3) {
+    animation-delay: 0.8s;
+}
+
+.detail-item:hover {
+    transform: translateY(-5px); /* 鼠标悬停时上浮 */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* 增加阴影 */
+}
+
+.detail-item h2 {
+    color: var(--color-2);
+    font-size: 24px;
+    margin-bottom: 15px;
+    text-align: center;
+    border-bottom: 2px solid var(--color-4);
+    padding-bottom: 10px;
+}
+
+.detail-item ul {
+    list-style: none;
+}
+
+.detail-item ul li {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.detail-item ul li strong {
+    margin-right: 8px;
+    flex-shrink: 0; /* 防止文本收缩 */
+}
+
+.detail-item ul li::before {
+    content: ''; /* 移除默认的项目符号 */
+}
+
+/* 动画定义 */
+@keyframes fadeInMoveUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .company-profile {
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    .company-details {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .detail-item {
+        min-width: unset;
+        width: 100%; /* 小屏幕下宽度100% */
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-content div {
+        margin-bottom: 20px;
+    }
+}

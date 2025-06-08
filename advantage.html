@@ -3,11 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>技术团队</title>
+    <link rel="stylesheet" href="advantage.css" />
     <link rel="stylesheet" href="index.css" />
-    <link rel="stylesheet" href="team.css" />
+    <title>核心技术</title>
   </head>
-
   <body>
     <header>
       <div class="header-container">
@@ -35,24 +34,65 @@
         </div>
       </div>
     </header>
+    <div class="advantage-section">
+      <h1>核心优势</h1>
 
-    <div class="team-section">
-      <h2>核心成员：12人（本科及以上占比75%）</h2>
-      <div class="team-member">
-        <h3>张春晓（创始人）</h3>
-        <p>15年智慧城市领域经验，主导多个国家级项目</p>
+      <div class="advantage-category reveal-from-left">
+        <div class="category-header">
+          <i class="icon-tech">💡</i>
+          <!-- 示例图标，可以使用CSS图标字体或SVG -->
+          <h2>技术领先</h2>
+        </div>
+        <ul class="tech-advantages">
+          <li>
+            <span class="advantage-point">自研AI算法平台</span>
+            <span class="advantage-desc">支持人脸识别、行为分析等场景应用</span>
+          </li>
+          <li>
+            <span class="advantage-point">专利技术</span>
+            <span class="advantage-desc">3项软件著作权 + 2项实用新型专利</span>
+          </li>
+          <li>
+            <span class="advantage-point">行业认证</span>
+            <span class="advantage-desc"
+              >CMMI三级认证 | ITSS信息技术服务标准</span
+            >
+          </li>
+        </ul>
       </div>
-      <div class="team-member">
-        <h3>技术骨干</h3>
-        <p>李工（高级架构师）：华为认证 ICT 专家</p>
-        <p>王工（安全工程师）：CISSP 国际注册信息系统安全专家</p>
-      </div>
-      <div class="team-photo">
-        <h2>团队风采</h2>
-        <img src="images/team.png" alt="团队合照" width="800" height="600" />
+
+      <div class="advantage-category reveal-from-right">
+        <div class="category-header">
+          <i class="icon-service">🛠️</i>
+          <!-- 示例图标 -->
+          <h2>全栈服务能力</h2>
+        </div>
+        <div class="service-table-container">
+          <table class="service-table">
+            <thead>
+              <tr>
+                <th><strong>服务类型</strong></th>
+                <th><strong>典型案例</strong></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>智慧安防</td>
+                <td>工厂周界防护系统</td>
+              </tr>
+              <tr>
+                <td>工业物联网</td>
+                <td>汽车零部件质量追溯平台</td>
+              </tr>
+              <tr>
+                <td>智慧建筑</td>
+                <td>酒店能耗管理系统</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
-
     <footer>
       <div class="footer-content">
         <div class="footer-logo">
@@ -86,5 +126,6 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="index.js"></script>
+    <script src="advantage.js"></script>
   </body>
 </html>

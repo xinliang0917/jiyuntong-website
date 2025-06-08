@@ -2,9 +2,9 @@
     "configurations": [
         {
             "type": "chrome",
-            "name": "http://127.0.0.1:3000/core-technology.html",
+            "name": "http://127.0.0.1:3000/core-advantage.html",
             "request": "launch",
-            "url": "http://127.0.0.1:3000/core-technology.html"
+            "url": "http://127.0.0.1:3000/core-advantage.html"
         }
     ]
 }

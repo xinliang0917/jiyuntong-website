@@ -1,3 +1,11 @@
+.swiper-slide {
+    flex-shrink: 0; /* 防止幻灯片缩小 */
+    width: 100%;
+    height: 100%;
+    will-change: transform;
+    transition: transform 0.3s ease;
+}
+
 .review-container {
     width: 80%;
     margin: 50px auto;
@@ -13,7 +21,7 @@
 .review-card {
     min-width: 100%;
     box-sizing: border-box;
-    padding: 20px;
+    padding: 30px 80px;
     background-color: var(--color-3);
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -29,23 +37,52 @@
     font-size: 16px;
     font-style: italic;
     color: #666;
+    text-align: right;
 }
 
-.nav-btn {
+.swiper-button-next,
+.swiper-button-prev {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
-    background-color: var(--color-3);
-    color: #666;
-    border: none;
-    padding: 60px 10px;
+    transform: translateY(-10%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
 }
 
-.prev-btn {
-    left: 10px;
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    content: '';
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-top: 3px solid var(--color-1);
+    border-right: 3px solid var(--color-1);
 }
 
-.next-btn {
-    right: 10px;
+.swiper-button-prev {
+    left: 20px;
+}
+
+.swiper-button-prev::after {
+    transform: rotate(-135deg);
+}
+
+.swiper-button-next {
+    right: 20px;
+}
+
+.swiper-button-next::after {
+    transform: rotate(45deg);
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background: #fff;
+    transform: scale(1.1);
 }

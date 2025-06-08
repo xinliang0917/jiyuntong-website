@@ -4,9 +4,10 @@
     margin: 20px auto;
 }
 
-.team-section h2 p {
+.team-section h2 {
     text-align: center;
     margin-bottom: 10px;
+    color: var(--color-1);
 }
 
 .team-summary {
@@ -30,7 +31,7 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: transform 0.3s ease;
-    margin-bottom: 30px;
+    margin: 30px 0;
 }
 
 .team-member:hover {
@@ -52,16 +53,21 @@
 /* 团队照片样式 */
 .team-photo {
     background-color: white;
-    padding: 1.5rem;
+    padding: 5rem 0;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
     text-align: center;
 }
 
+.team-photo h2 {
+    margin-top: -5%;
+   color: var(--color-1); 
+}
+
 .team-photo img {
     margin-top: 20px;
-    max-width: 100%;
+    max-width: 80%;
     height: auto;
     border-radius: 8px;
     transition: transform 0.3s ease;
@@ -69,4 +75,53 @@
 
 .team-photo img:hover {
     transform: scale(1.05);
+}
+
+
+/* 定义淡入动画 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.team-section {
+    animation: fadeIn 1s ease-out; /* 整个团队部分应用淡入动画 */
+}
+
+.team-member {
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-out; /* 每个团队成员应用淡入动画 */
+    animation-fill-mode: both; /* 保持动画结束状态 */
+}
+
+/* 为每个团队成员添加不同的延迟 */
+.team-member:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.team-member:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.team-member:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.team-photo {
+    margin-top: 30px;
+    overflow: hidden; /* 防止图片缩放时溢出 */
+    animation: fadeIn 1s ease-out 0.8s; /* 团队照片应用淡入动画，并设置延迟 */
+    animation-fill-mode: both; /* 保持动画结束状态 */
+}
+
+.team-photo img {
+    width: 100%;
+    height: auto;
+    
 }

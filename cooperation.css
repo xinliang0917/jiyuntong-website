@@ -6,7 +6,7 @@
 
 .section-title {
     font-size: 2rem;
-    color: var(--color-4);
+    color: var(--color-1);
     margin: 1.5rem;
     animation: fadeInLeft 1s ease-out;
     position: relative;
@@ -30,6 +30,20 @@
     flex: 1 1 calc(33.333% - 2rem);
     min-width: 250px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.alliance-item {
+    list-style-type: none; 
+}
+.alliance-item a {
+    text-decoration: none; 
+    color: inherit; 
+    background-color: transparent; 
+    border: none; 
+}
+
+.alliance-item a:hover {
+    color: var(--color-4); 
 }
 
 .partner-item:hover,

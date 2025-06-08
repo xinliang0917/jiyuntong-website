@@ -29,4 +29,18 @@ document.addEventListener('DOMContentLoaded', function() {
             searchButton.click();
         }
     });
+
+    // 获取所有导航链接
+    const navLinks = document.querySelectorAll('.nav-links li a');
+    // 获取当前页面的路径
+    const currentPath = window.location.pathname;
+
+    navLinks.forEach(link => {
+        // 获取链接的路径
+        const linkPath = new URL(link.href).pathname;
+        // 检查链接路径是否与当前页面路径匹配
+        if (linkPath === currentPath) {
+            link.parentElement.classList.add('active');
+        }
+    });
 });
