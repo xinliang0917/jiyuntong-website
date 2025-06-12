@@ -43,11 +43,7 @@ header {
     /* 让内边距包含在宽度内 */
 }
 
-@media (max-width: 768px) {
-    .header-container {
-        justify-content: center;
-    }
-}
+
 
 .logo {
     width: 80px;
@@ -142,8 +138,8 @@ header {
 }
 
 .swiper-container {
-    width: 60%;
-    height: 40vh;
+    width: 100%;
+    height: 80vh;
     margin: 0 auto;
     overflow: hidden;
     position: relative;
@@ -464,35 +460,73 @@ footer{
 
 /* 响应式设计 */
 @media (max-width: 1024px) {
+    .header{
+        padding: 8px 0;
+    }
+
+    .header-container{
+    gap: 15px;
+    padding: 0 12px;
+    }
+
+    
+
+
     .nav-links {
-        gap: 20px;
+        gap: 15px;
     }
 
     .nav-links a {
-        font-size: 16px;
+        font-size: 12px;
+        padding: 3px 0;
     }
 
     .search-bar input {
         width: 180px;
     }
+     .swiper-container {
+        height: 60vh; /* 减小轮播图高度，可根据实际调整 */
+    }
 
     .swiper-button-next,
     .swiper-button-prev {
-        width: 40px;
-        height: 40px;
+        width: 35px;
+        height: 35px;
     }
 }
 
 @media (max-width: 768px) {
+    header{
+        padding: 6px 0;
+    }
     .header-container {
+        justify-content: center;
         flex-direction: column;
-        gap: 30px;
+        gap: 12px;
+       
         /* 在小屏幕上调整间隙 */
     }
 
+    .logo {
+        width: 60px; 
+        height: 60px; 
+    }
+
+     .logo img {
+        width: 60px; 
+        height: 60px; 
+    }
+
+    
+
     .nav-links {
         order: 2;
-        gap: 15px;
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 12px; /* 减小导航链接的字体大小 */
+        padding: 3px 0; /* 减小导航链接的内边距 */
     }
 
     .search-bar {
@@ -502,8 +536,18 @@ footer{
     }
 
     .search-bar input {
+        height: 28px;
         width: 70%;
+        font-size: 11px;
         max-width: 400px;
+        padding: 0 11px;
+    }
+
+     .search-bar button {
+        height: 28px; 
+        font-size: 11px; 
+        width: 50px; 
+        padding: 0 10px; 
     }
 
     .swiper-button-next,
@@ -512,12 +556,34 @@ footer{
         height: 35px;
     }
 
+    .swiper-container{
+        height: 40vh;
+    }
+
+    .content{
+        margin: 30px auto;
+    }
+
     .section-title h2 {
-        font-size: 28px;
+        font-size: 24px;
+    }
+
+    .section-title p {
+        font-size: 14px;
     }
 
     .feature-content h3 {
-        font-size: 20px;
+        font-size: 18px;
+    }
+
+    .feature-content p {
+        font-size: 14px;
+    }
+
+    .develop-concept {
+        font-size: 16px; /* 减小发展理念文字字体大小 */
+        padding: 15px;
+        border-left: 15px solid var(--color-2);
     }
 }
 

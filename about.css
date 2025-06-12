@@ -115,14 +115,46 @@
         margin: 20px auto;
     }
 
+     .company-profile p {
+        font-size: 16px; 
+        line-height: 1.6; 
+    }
+
     .company-details {
+        margin: 20px;
+        padding: 20px;
         flex-direction: column;
         align-items: center;
+        overflow: visible;
     }
 
     .detail-item {
-        min-width: unset;
+        min-width: 0; /* 移除最小宽度限制 */
+        margin: 0 0 20px; /* 调整外边距 */
         width: 100%; /* 小屏幕下宽度100% */
+    }
+
+    
+
+     .detail-item h2 {
+        font-size: 20px; 
+    }
+
+    .detail-item ul li {
+        font-size: 16px; 
+        line-height: 1.6; 
+    }
+
+     @keyframes fadeInMoveUp {
+        from {
+            opacity: 0;
+            transform: translateY(10px); /* 减小动画初始移动距离 */
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+           
     }
 
     .footer-content {
