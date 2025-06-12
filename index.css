@@ -138,8 +138,8 @@ header {
 }
 
 .swiper-container {
-    width: 100%;
-    height: 80vh;
+    width: 60%;
+    height: 50vh;
     margin: 0 auto;
     overflow: hidden;
     position: relative;
