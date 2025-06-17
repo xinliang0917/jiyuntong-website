@@ -2,14 +2,19 @@
   margin: 40px auto;
   max-width: 1200px;
   padding: 20px;
-  display: flex; /* 使用flex布局 */
-  flex-wrap: wrap; /* 允许换行 */
-  justify-content: center; /* 居中对齐 */
-  gap: 30px; /* 卡片间距 */
+  display: flex;
+  /* 使用flex布局 */
+  flex-wrap: wrap;
+  /* 允许换行 */
+  justify-content: center;
+  /* 居中对齐 */
+  gap: 30px;
+  /* 卡片间距 */
 }
 
 .advantage-section h1 {
-  width: 100%; /* 标题占据整行 */
+  width: 100%;
+  /* 标题占据整行 */
   text-align: center;
   color: var(--color-1);
   font-size: 40px;
@@ -20,11 +25,15 @@
   border-radius: 12px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
   padding: 30px;
-  flex: 1; /* 弹性伸缩 */
-  min-width: 450px; /* 最小宽度 */
-  max-width: 550px; /* 最大宽度 */
+  flex: 1;
+  /* 弹性伸缩 */
+  min-width: 450px;
+  /* 最小宽度 */
+  max-width: 550px;
+  /* 最大宽度 */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  opacity: 0; /* 初始透明度 */
+  opacity: 0;
+  /* 初始透明度 */
 }
 
 .advantage-category:hover {
@@ -34,18 +43,21 @@
 
 /* Animations */
 .reveal-from-left {
-  transform: translateX(-100px); /* 初始向左偏移 */
+  transform: translateX(-100px);
+  /* 初始向左偏移 */
 }
 
 .reveal-from-right {
-  transform: translateX(100px); /* 初始向右偏移 */
+  transform: translateX(100px);
+  /* 初始向右偏移 */
 }
 
 .reveal-from-left.active,
 .reveal-from-right.active {
   opacity: 1;
   transform: translateX(0);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* 动画持续时间 */
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  /* 动画持续时间 */
 }
 
 .category-header {
@@ -85,7 +97,8 @@
   font-weight: bold;
   color: var(--color-2);
   margin-right: 10px;
-  flex-shrink: 0; /* 防止收缩 */
+  flex-shrink: 0;
+  /* 防止收缩 */
 }
 
 .advantage-desc {
@@ -94,7 +107,8 @@
 
 /* Service Table */
 .service-table-container {
-  overflow-x: auto; /* 保证表格在小屏幕上可滚动 */
+  overflow-x: auto;
+  /* 保证表格在小屏幕上可滚动 */
   width: 100%;
 }
 
@@ -119,7 +133,8 @@
 }
 
 .service-table tbody tr:nth-child(even) {
-  background-color: var(--color-3); /* 隔行变色 */
+  background-color: var(--color-3);
+  /* 隔行变色 */
 }
 
 .service-table tbody tr:hover {
@@ -130,21 +145,25 @@
 }
 
 /* Responsive Design */
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
   .advantage-section {
-    flex-direction: column; /* 小屏幕下垂直排列 */
+    flex-direction: column;
     align-items: center;
     gap: 30px;
   }
 
   .advantage-category {
-    min-width: unset; /* 取消最小宽度限制 */
-    max-width: 90%; /* 占据大部分宽度 */
+    width: 100%;
+    /* 新增：确保宽度一致 */
+    max-width: 550px;
+    /* 保持最大宽度限制 */
+    min-width: auto;
+    /* 移除最小宽度限制 */
   }
 
   .reveal-from-left,
   .reveal-from-right {
-    transform: translateY(50px); /* 小屏幕下统一从下方上浮 */
+    transform: translateY(50px);
   }
 }
 
@@ -180,6 +199,20 @@
   .service-table th,
   .service-table td {
     padding: 10px;
-    font-size: 15px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tech-advantages li {
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 12px;
+  }
+
+  .service-table th,
+  .service-table td {
+    padding: 10px;
+    font-size: 12px;
   }
 }
