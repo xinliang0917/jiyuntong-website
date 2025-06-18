@@ -45,11 +45,15 @@
     transform: translateX(0);
   }
 }
+.project-content{
+  flex:1;
+}
 
 .project-cards {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  
 }
 
 .project-card {
@@ -63,6 +67,8 @@
   flex-wrap: wrap;
   align-items: stretch;
 }
+
+
 
 @media (max-width: 768px) {
   .project-card {
